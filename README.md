@@ -9,8 +9,6 @@
 ## Description
 This project is an web application fullstack based on Spring Boot & Angular with Spring Boot for backend and Angular for frontend. Basically, on the backend connect to MySQL database and use Spring Data JPA to generates table in database and from that i have ER Diagram, you can see it below description. On the frontend, build UI, interface,  component, service, router and make REST HTTP.
 
-I used IntelliJ IDEA for backend and Visual Studio Code for frontend. I have Dockerfile to build own image for application to run App container. When I build already done both backend, frontend then i put frontend project into backend project in IntelliJ IDEA
-
 ## Frontend (client) communicate with backend (server)
 ![communicate](https://user-images.githubusercontent.com/86077654/141684313-71b57416-fa47-4010-9b8c-60d981a8efce.png)
 
@@ -32,7 +30,6 @@ I used IntelliJ IDEA for backend and Visual Studio Code for frontend. I have Doc
 - Go to pom.xml file -> Maven -> Reload project
 - Open the project and follow path "\src\main\resources\application.properties" to configuation application.properties to connect database. Make sure you created database "student" and change username and password with your MySQL account
 - Go to Maven at the top-right corner and run command "mvn clean package" to create jar file
-- Open DbConfiguration.java and delete or comment all line, keep only the class name
 
 #### The first way(Different localhost):
 Click DemoApplication and Run. After the program has finished running. Open your browser "http://localhost:8080/api/spring-boot/student"  to see API of backend.
@@ -63,10 +60,10 @@ Start with MySQL container first, then run App container later.
 
 Stop App container first, then stop MySQL container later.
 
-#### The fourth way (Pull the image of Application and run docker container)
-Make sure you are running mysql-db container.
+#### The fourth way (use docker-compose.yml to run container)
+Make sure you created empty data folder in root project.
 
-Finally, run "docker run --name web-fullstack --network db -e MYSQL_HOST=mysql-db -d -p 8080:8080 ntloc/web-app-fullstack-springboot-angular" which ntloc/web-app-fullstack-springboot-angular is image of application on docker hub.
+Open terminal at project and follow this command "docker-compose -f compose.yml up" to run MySQL containner and App container then open localhost:8080 on your browser. If you want remove docker-compose, follow this command "docker-compose -f compose.yml down".
 
 Good luck !!!
 
