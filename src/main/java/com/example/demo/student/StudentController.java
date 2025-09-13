@@ -10,7 +10,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @RestController //This annotation make this class request API layer
-@RequestMapping(path = "/api/spring-boot/student") //mapping to the endpoint url
+@RequestMapping(path = "student") //mapping to the endpoint url
 public class StudentController { //Request API , Response API
 
     private final StudentService studentService;

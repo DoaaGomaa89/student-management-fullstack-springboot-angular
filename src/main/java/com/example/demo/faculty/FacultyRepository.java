@@ -11,4 +11,5 @@ public interface FacultyRepository extends JpaRepository<Faculty,Integer> {
 
     @Query("SELECT f FROM Faculty f WHERE f.name = ?1")
     Optional<Faculty> findFacultyByName(String name);
+
 }
