@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "api/spring-boot/library-card")
+@RequestMapping(path = "library-card")
 public class LibraryCardController {
 
     private final LibraryCardService libraryCardService;

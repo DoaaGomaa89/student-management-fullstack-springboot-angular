@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/api/spring-boot/faculty")
+@RequestMapping(path = "faculty")
 public class FacultyController {
 
     private final FacultyService facultyService;
