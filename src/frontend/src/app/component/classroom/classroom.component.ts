@@ -1,7 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { stringify } from 'querystring';
 import { Classroom } from 'src/app/interface/classroom';
 import { Faculty } from 'src/app/interface/faculty';
 import { ClassroomService } from 'src/app/service/classroom.service';
